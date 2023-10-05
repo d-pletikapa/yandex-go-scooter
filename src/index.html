@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="image/svg+xml" rel="icon" href="img/logo.svg">
-  <title>yandex GO scooter</title>
+  <title>Yandex GO scooter</title>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const createLink = (url) => {
@@ -17,13 +17,26 @@
       createLink('css/index.css');
     });
   </script>
+
+
+      <!-- Метаданные Open Graph -->
+      <meta property="og:title" content="Yandex GO scooter">
+      <meta property="og:description" content="Описание вашего лендинга">
+      <meta property="og:image" content="./img/__main-section/og.jpg"> <!-- URL изображения для предпросмотра в соцсетях -->
+      <meta property="og:url" content="./img/__main-section/og.jpg"> <!-- URL лендинга -->
+      
+      <!-- Заголовок и описание для Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Yandex GO scooter">
+      <meta name="twitter:description" content="Вступайте в клуб Самокатов">
+
 </head>
 
 <body>
   <header class="header">
     <div class="container">
       <section class="header__section">
-        <a href="https://go.yandex/ru_ru/lp/rides/scooter">
+        <a class="header__link" target="_blank" href="https://go.yandex/ru_ru/lp/rides/scooter" tabindex="0" aria-label="link on logo - yandex GO scooter">
           <svg xmlns="http://www.w3.org/2000/svg" width="176" height="52" viewBox="0 0 176 52" fill="none">
             <path
               d="M139.016 0.935547H158.478C163.125 0.936031 167.581 2.78168 170.867 6.06658C174.153 9.35148 176 13.8066 176 18.4522V33.5494C176 35.8496 175.547 38.1273 174.666 40.2524C173.786 42.3775 172.495 44.3084 170.868 45.9348C169.241 47.5612 167.309 48.8513 165.183 49.7314C163.057 50.6115 160.779 51.0644 158.478 51.0641H139.216C136.915 51.0644 134.637 50.6115 132.511 49.7314C130.385 48.8513 128.454 47.5612 126.826 45.9348C125.199 44.3084 123.909 42.3775 123.028 40.2524C122.147 38.1273 121.694 35.8496 121.694 33.5494V18.4522C121.694 8.7763 129.336 0.935547 139.016 0.935547Z"
@@ -49,12 +62,12 @@
         <p class="main__description">
           Купите абонемент, чтобы стать частью клуба в новом сезоне–2024. 8 месяцев за
           <span class="description__price">
-            <span class="price__after">499 ₽</span>
-            <span class="price__before">3190 ₽</span>
+            <span class="price__after" aria-label="price now 499₽" tabindex="0">499₽</span>
+            <span class="price__before" aria-label="price before 3190₽" tabindex="0">3190₽</span>
           </span>
         </p>
-        <button class="main__btn">
-          Стать частью клуба
+        <button type="button" class="main__btn">
+          <a target="_blank" href="https://go.yandex/ru_ru/lp/rides/scooter">Стать частью клуба</a>
         </button>
       </section>
     </div>
