@@ -1,0 +1,26 @@
+.main {
+  &__header {
+    color: blue;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -1.44px;
+  }
+  &__description {
+    width: 465px;
+    display: inline-flex;
+    color: #21201F;
+    font-family: 'YS-text-medium', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2;
+  }
+  /*.main__section {} */
+  /*.description__price {} */
+
+  /*.price__after {} */
+
+  /*.price__before {} */
+
+  /*.main__btn {} */
+}
+
