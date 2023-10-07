@@ -13,6 +13,35 @@
 }
 
 .header {
+  position: relative;
+
+  &__link {
+    display: block;
+    width: 176px;
+    height: 52px;
+  }
+
+  &:after {
+    width: 100%;
+    z-index: -290;
+    height: 806px;
+    top: 0;
+    position: absolute;
+    content: url('');
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  }
+
+  &:before {
+    z-index: -300;
+    content: url('');
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 804px;
+    opacity: 0.22;
+    background: var(--Linear, linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FF5C4D 0%, #EB469F 25%, #8341EF 72%, #3F68F9 100%));
+  }
+
   &__section {
     padding-top: 125px; //125px
     padding-bottom: 5px;
@@ -20,29 +49,41 @@
 }
 
 .main {
+  &__infograph {
+    z-index: -10;
+    position: relative;
+    display: none;
+    background-image: url("../img/__main-section/smkt0003-2-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 27px;
+  }
+
   &__header {
     color: var(--c-font-general);
     font-size: 72px;
     line-height: 72px;
     letter-spacing: -1.44px;
-    margin-bottom: 34px;
+    margin-bottom: 29px;
   }
+
   & .container {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
   }
+
   &__section {
     display: flex;
     flex-flow: column wrap;
     position: relative;
     padding-top: 54px;
-    
+
     &::before {
       z-index: -100;
       content: url('../img/__main-section/smkt0003-2-w-blur.png');
       height: 618px;
       position: absolute;
-      top: -182px;
-      right: -274px;
+      top: -187px;
+      right: 0; // 193px
       // top: -135px;
       // right: -262px;
       //../img/__main-section/smkt0003-2.png
@@ -64,13 +105,17 @@
       // transform: rotate(-140.03deg);
 
       content: url('../img/__main-section/Group-2087325522.svg');
+      z-index: -90;
       position: absolute;
-      bottom: 140px;
-      right: 118px;
+      bottom: 138px;
+      right: 391px;
       will-change: transform;
-      animation: rotateClockwise 4s ease-in-out 3; /* Настройка анимации */
-      animation-delay: 2s; /* Задержка анимации на 2 секунды */
-      animation-fill-mode: forwards; /* Остановить после завершения */
+      animation: rotateClockwise 4s ease-in-out 3;
+      /* Настройка анимации */
+      animation-delay: 2s;
+      /* Задержка анимации на 2 секунды */
+      animation-fill-mode: forwards;
+      /* Остановить после завершения */
     }
   }
 
@@ -82,7 +127,7 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 31.2px;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   }
 
   &__btn {
@@ -90,6 +135,7 @@
     height: 65px;
     display: inline-flex;
     padding: 24px 48px;
+    justify-content: center;
     align-items: center;
     gap: 4px;
     border-radius: 36px;
@@ -101,6 +147,7 @@
     font-family: 'YS-text-medium', sans-serif;
     font-size: 24px;
     line-height: 22px;
+
     &:hover {
       background-color: var(--c-font-general);
       color: var(--c-btn-bg);
@@ -145,5 +192,104 @@
     font-size: 16px;
     line-height: 19.2px;
     text-decoration: line-through;
+  }
+}
+
+@include breakpoint-mobile {
+  .header {
+    &__link {
+      width: 113px;
+      height: 32px;
+
+      & svg {
+        width: 113px;
+        height: 32px;
+      }
+    }
+
+    &__section {
+      padding: 32px 32px 12px 32px;
+    }
+  }
+
+  .main {
+    &__header {
+      width: 311px;
+      font-size: 36px;
+      line-height: 36px;
+      letter-spacing: -0.72px;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      width: 311px;
+      font-size: 18px;
+      line-height: 23.4px;
+      margin-bottom: -14px;
+    }
+
+    &__btn {
+      position: fixed;
+      display: flex;
+      width: 311px;
+      padding: 18px 0px;
+      bottom: 24px;
+    }
+
+    &__infograph {
+      display: block;
+
+      &::before {
+        z-index: 100;
+        content: url('../img/__main-section/Group-2087325522-mobile.svg');
+        width: 86px;
+        height: 86px;
+        position: absolute;
+        bottom: 73px;
+        right: 168px;
+
+        will-change: transform;
+        animation: rotateClockwise 4s ease-in-out 3;
+        /* Настройка анимации */
+        animation-delay: 2s;
+        /* Задержка анимации на 2 секунды */
+        animation-fill-mode: forwards;
+        /* Остановить после завершения */
+      }
+    }
+
+    &__section {
+      padding: 16px 32px 21px 32px;
+
+      &::before {
+        content: url('');
+        display: none;
+      }
+
+      &::after {
+        content: url('');
+        display: none;
+      }
+    }
+  }
+
+  .description__price {
+    height: 23px;
+  }
+
+  .price {
+    &__after {
+      height: 23px;
+      padding: 5px 8px 5px 7px;
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+
+    &__before {
+      height: 23px;
+      padding: 8px 5px;
+      font-size: 13px;
+      line-height: 15.6px;
+    }
   }
 }

@@ -115,8 +115,14 @@ iframe {
 
 section {
   max-width: var(--max-width-section);
-  padding: var(--padding-section);
+  min-width: 344px;
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  padding-left: 141px;
   margin: 0 auto;
+  @include breakpoint-mobile {
+    padding: 36px 15.5px;
+  }
 }
 
 h1 {
