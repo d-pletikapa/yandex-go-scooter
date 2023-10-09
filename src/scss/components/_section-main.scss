@@ -44,7 +44,7 @@
 
   &__section {
     padding-top: 125px; //125px
-    padding-bottom: 5px;
+    padding-bottom: 9px;
   }
 }
 
@@ -83,7 +83,7 @@
       height: 618px;
       position: absolute;
       top: -187px;
-      right: 0; // 193px
+      right: -51px; // 193px
       // top: -135px;
       // right: -262px;
       //../img/__main-section/smkt0003-2.png
@@ -108,7 +108,7 @@
       z-index: -90;
       position: absolute;
       bottom: 138px;
-      right: 391px;
+      right: 340px;
       will-change: transform;
       animation: rotateClockwise 4s ease-in-out 3;
       /* Настройка анимации */
